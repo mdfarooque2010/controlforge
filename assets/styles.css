@@ -121,24 +121,17 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 .wordmark {
   font-family: var(--display);
   font-weight: 700;
-  font-size: 1.02rem;
+  font-size: 1.45rem;
   text-decoration: none;
   color: var(--ink);
-  letter-spacing: -0.01em;
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
+  letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease;
 }
 
-.wordmark .dwg {
-  font-family: var(--mono);
-  font-size: 0.66rem;
-  font-weight: 500;
+.wordmark:hover {
   color: var(--accent);
-  border: 1px solid var(--accent);
-  padding: 2px 5px;
-  letter-spacing: 0.06em;
-  border-radius: var(--radius);
 }
 
 .nav {
@@ -533,38 +526,44 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 /* ----------------------------------------------------------- promo bar -- */
 
 .promo-banner {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-bottom: 1.5px solid var(--ink);
+  font-weight: 600;
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.1);
 }
 
 .promo-banner .wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 10px 28px;
+  gap: 12px;
+  padding: 12px 28px;
   flex-wrap: wrap;
   text-align: center;
 }
 
 .promo-banner strong {
   font-family: var(--mono);
-  font-size: 0.76rem;
-  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  background: var(--accent);
-  color: var(--accent-ink);
-  padding: 3px 8px;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 4px 10px;
   border-radius: var(--radius);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15);
 }
 
 .promo-banner span {
-  font-size: 0.88rem;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
 }
 
 .promo-banner a {
   text-decoration: underline;
-  color: var(--paper);
+  color: var(--accent-ink);
+  font-weight: 700;
 }
 
 /* -------------------------------------------------------- price block -- */
@@ -592,13 +591,16 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 
 .price-off {
   font-family: var(--mono);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  background: var(--live-bg);
-  color: var(--live);
-  padding: 3px 8px;
+  background: var(--flag-bg);
+  color: var(--flag);
+  border: 1.5px solid var(--flag);
+  padding: 4px 10px;
   border-radius: var(--radius);
+  font-weight: bold;
+  box-shadow: 2px 2px 0 var(--ink);
 }
 
 .upgrade-badge {
